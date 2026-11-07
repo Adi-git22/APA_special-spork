@@ -194,3 +194,170 @@ body {
     border-radius: 46% 46% 6px 6px;
   }
 }
+
+/* =====================================
+   PARINAYA - CINEMATIC TEMPLE INTRO
+===================================== */
+
+.temple-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background: #f8eee6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.4s ease, visibility 1.4s ease;
+}
+
+.temple-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #f8eee6;
+}
+
+.temple-ganesha {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.04);
+  animation: ganeshaReveal 2s ease forwards;
+}
+
+/* Door panels */
+
+.temple-door {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50.1%;
+  background-image: url("assets/temple-doors.png");
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  transition: transform 3s cubic-bezier(.77, 0, .18, 1);
+  will-change: transform;
+  z-index: 2;
+}
+
+.temple-door-left {
+  left: 0;
+  background-position: left center;
+  transform-origin: left center;
+}
+
+.temple-door-right {
+  right: 0;
+  background-position: right center;
+  transform-origin: right center;
+}
+
+/* Intro text */
+
+.temple-intro-text {
+  position: absolute;
+  z-index: 5;
+  bottom: 9%;
+  width: 100%;
+  text-align: center;
+  color: #74534a;
+  padding: 0 20px;
+  animation: templeTextReveal 1.8s ease both;
+}
+
+.temple-intro-text span {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(20px, 4vw, 30px);
+  color: #a98253;
+  margin-bottom: 10px;
+}
+
+.temple-intro-text p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(17px, 3vw, 23px);
+  margin: 0 0 12px;
+}
+
+.temple-intro-text small {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+}
+
+/* Door opening */
+
+.temple-intro.is-opening .temple-door-left {
+  transform: translateX(-100%);
+}
+
+.temple-intro.is-opening .temple-door-right {
+  transform: translateX(100%);
+}
+
+/* Remove intro */
+
+.temple-intro.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Animations */
+
+@keyframes ganeshaReveal {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes templeTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 600px) {
+  .temple-intro-text {
+    bottom: 7%;
+  }
+
+  .temple-door {
+    background-size: 200% 100%;
+  }
+
+  .temple-ganesha {
+    object-position: center;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .temple-intro,
+  .temple-door,
+  .temple-intro-text,
+  .temple-ganesha {
+    transition-duration: 0.01ms;
+    animation-duration: 0.01ms;
+  }
+}
