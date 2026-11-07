@@ -4,107 +4,6 @@
    PARINAYA – CINEMATIC DESIGN UPGRADE
    ===================================== */
 
-/* Soft cinematic light */
-.hero {
-  isolation: isolate;
-  background:
-    radial-gradient(ellipse at 50% 35%, rgba(255,255,255,.95), transparent 55%),
-    radial-gradient(ellipse at 15% 20%, #f5e1d4, transparent 45%),
-    radial-gradient(ellipse at 85% 80%, #ead3c3, transparent 45%),
-    linear-gradient(135deg, #fff9f3, #f8eee6);
-}
-
-/* Subtle golden decorative frame */
-.hero:before,
-.hero:after {
-  box-shadow: 0 0 35px rgba(177,123,87,.08);
-  animation: frameGlow 7s ease-in-out infinite alternate;
-}
-
-@keyframes frameGlow {
-  from { opacity: .25; }
-  to { opacity: .65; }
-}
-
-/* Elegant text reveal */
-.hero .eyebrow,
-.hero .ganesha,
-.hero .invite-line,
-.hero h1,
-.hero .flourish,
-.hero .hero-copy,
-.hero .date-lockup,
-.hero .primary-button,
-.hero .hero-bottom {
-  animation: elegantReveal 1.2s ease both;
-}
-
-.hero .ganesha { animation-delay: .15s; }
-.hero .invite-line { animation-delay: .3s; }
-.hero h1 { animation-delay: .5s; }
-.hero .flourish { animation-delay: .7s; }
-.hero .hero-copy { animation-delay: .85s; }
-.hero .date-lockup { animation-delay: 1s; }
-.hero .primary-button { animation-delay: 1.15s; }
-
-@keyframes elegantReveal {
-  from {
-    opacity: 0;
-    transform: translateY(22px);
-    filter: blur(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
-/* Floating ornamental flowers */
-.hero-ornament {
-  animation: ornamentFloat 8s ease-in-out infinite;
-}
-
-.ornament-right {
-  animation-delay: -4s;
-}
-
-@keyframes ornamentFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-16px) rotate(12deg); }
-}
-
-/* Gentle glow on Om */
-.ganesha {
-  text-shadow: 0 0 25px rgba(180,123,85,.2);
-  animation: elegantReveal 1.2s ease both,
-             symbolGlow 4s ease-in-out 1.2s infinite alternate;
-}
-
-@keyframes symbolGlow {
-  from { text-shadow: 0 0 8px rgba(180,123,85,.1); }
-  to { text-shadow: 0 0 28px rgba(180,123,85,.35); }
-}
-
-/* Story illustration depth */
-.couple-art {
-  box-shadow: 0 20px 60px rgba(112,74,64,.08);
-}
-
-.sun-disc {
-  animation: sunGlow 6s ease-in-out infinite alternate;
-}
-
-@keyframes sunGlow {
-  from { transform: scale(.96); opacity: .75; }
-  to { transform: scale(1.06); opacity: 1; }
-}
-
-/* More refined section transitions */
-.section-kicker {
-  letter-spacing: 3.5px;
-}
-
 .detail-card {
   transition: transform .4s ease, box-shadow .4s ease;
 }
@@ -114,23 +13,14 @@
   box-shadow: 0 22px 55px rgba(121,87,70,.12);
 }
 
-/* Smooth button interaction */
-.primary-button {
-  box-shadow: 0 7px 20px rgba(92,64,57,.10);
-}
-
-.primary-button:hover {
-  box-shadow: 0 12px 25px rgba(92,64,57,.18);
-}
-
-/* Accessibility: respect reduced motion */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: .01ms !important;
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    filter: none !important;
   }
 }
