@@ -164,3 +164,33 @@
 body {
   outline: 8px solid red !important;
 }
+/* PARINAYA – WATERCOLOUR STORY ART */
+
+.couple-art {
+  width: min(90%, 680px);
+  margin: 45px auto 0;
+  overflow: hidden;
+  border-radius: 48% 48% 8px 8px;
+  box-shadow: 0 20px 60px rgba(112,74,64,.12);
+  background: #f8eee6;
+}
+
+.story-watercolor {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+
+.couple-art:hover .story-watercolor {
+  transform: scale(1.035);
+}
+
+@media (max-width: 600px) {
+  .couple-art {
+    width: 94%;
+    margin-top: 30px;
+    border-radius: 46% 46% 6px 6px;
+  }
+}
