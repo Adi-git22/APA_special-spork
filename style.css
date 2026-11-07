@@ -331,9 +331,49 @@ body {
 
 /* REMOVE INTRO TEXT */
 
+
+/* SUBTLE TEMPLE INTRO TEXT */
+
 .temple-intro-text {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  bottom: 8%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0 15px;
+  pointer-events: none;
+  opacity: 0;
+  animation: blessingFade 2.5s ease 0.8s forwards;
+}
+
+.temple-intro-text span {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(18px, 3vw, 25px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #ad906e;
+  opacity: 0.72;
+}
+
+.temple-intro-text p,
+.temple-intro-text small {
   display: none;
 }
+
+@keyframes blessingFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 0.75;
+    transform: translateY(0);
+  }
+}
+
 
 /* SOFT TRANSITION TO WEBSITE */
 
