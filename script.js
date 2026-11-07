@@ -28,3 +28,28 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+/* =====================================
+   PARINAYA - TEMPLE DOOR INTRO
+===================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const intro = document.getElementById("templeIntro");
+
+  if (!intro) return;
+
+  // Allow guests to see the temple entrance
+  setTimeout(() => {
+    intro.classList.add("is-opening");
+  }, 2500);
+
+  // Fade away after the doors open
+  setTimeout(() => {
+    intro.classList.add("is-hidden");
+  }, 5700);
+
+  // Remove the intro from the screen
+  setTimeout(() => {
+    intro.remove();
+  }, 7200);
+});
