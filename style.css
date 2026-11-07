@@ -236,17 +236,75 @@ body {
 
 /* Door panels */
 
+
+/* =========================================
+   PARINAYA - CINEMATIC TEMPLE DOOR OPENING
+========================================= */
+
+.temple-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #f8eee6;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.8s ease, visibility 1.8s ease;
+}
+
+.temple-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  perspective: 1800px;
+  perspective-origin: center center;
+  background: #f8eee6;
+}
+
+/* GANESHA REVEAL */
+
+.temple-ganesha {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 2.4s ease, transform 4s ease;
+}
+
+.temple-intro.is-opening .temple-ganesha {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* TEMPLE DOORS */
+
 .temple-door {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 50.1%;
+  width: 50%;
+  z-index: 3;
+
   background-image: url("assets/temple-doors.png");
   background-repeat: no-repeat;
   background-size: 200% 100%;
-  transition: transform 3s cubic-bezier(.77, 0, .18, 1);
+
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  transition:
+    transform 3.8s cubic-bezier(0.65, 0, 0.25, 1);
+
   will-change: transform;
-  z-index: 2;
 }
 
 .temple-door-left {
@@ -260,6 +318,57 @@ body {
   background-position: right center;
   transform-origin: right center;
 }
+
+/* REAL HINGED DOOR MOVEMENT */
+
+.temple-intro.is-opening .temple-door-left {
+  transform: rotateY(-110deg);
+}
+
+.temple-intro.is-opening .temple-door-right {
+  transform: rotateY(110deg);
+}
+
+/* REMOVE INTRO TEXT */
+
+.temple-intro-text {
+  display: none;
+}
+
+/* SOFT TRANSITION TO WEBSITE */
+
+.temple-intro.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .temple-scene {
+    perspective: 1200px;
+  }
+
+  .temple-door {
+    transition-duration: 3.4s;
+  }
+
+  .temple-ganesha {
+    object-position: center;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .temple-intro,
+  .temple-door,
+  .temple-ganesha {
+    transition-duration: 0.01ms;
+  }
+}
+
 
 /* Intro text */
 
