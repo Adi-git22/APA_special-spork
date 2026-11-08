@@ -1039,6 +1039,42 @@ footer small {
 }
 
 /* =========================================
+   PARINAYA - MOBILE TEMPLE DOOR FIX
+========================================= */
+
+@media (max-width: 650px) {
+
+  .temple-scene {
+    perspective: 1800px;
+  }
+
+  .temple-door {
+    width: 50%;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    transition: transform 4.6s cubic-bezier(.65,0,.25,1);
+  }
+
+  .temple-door-left {
+    left: 0;
+    background-position: left center;
+    transform-origin: left center;
+  }
+
+  .temple-door-right {
+    right: 0;
+    background-position: right center;
+    transform-origin: right center;
+  }
+
+  .temple-ganesha {
+    object-fit: cover;
+    object-position: center center;
+  }
+
+}
+
+/* =========================================
    ACCESSIBILITY
 ========================================= */
 
