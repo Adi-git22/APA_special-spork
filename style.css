@@ -1490,3 +1490,66 @@ footer {
 
 }
 
+/* =========================================
+   PARINAYA - MOBILE PORTRAIT TEMPLE FIX
+========================================= */
+
+@media screen and (max-width: 650px) and (orientation: portrait) {
+
+  .temple-intro {
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .temple-scene {
+    position: absolute;
+    inset: 0;
+    perspective: 1600px;
+    perspective-origin: 50% 50%;
+    overflow: hidden;
+  }
+
+  .temple-door {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 4.6s cubic-bezier(.65,0,.25,1);
+  }
+
+  .temple-door-left {
+    left: 0;
+    background-position: left center;
+    transform-origin: left center;
+  }
+
+  .temple-door-right {
+    right: 0;
+    background-position: right center;
+    transform-origin: right center;
+  }
+
+  .temple-intro.is-opening .temple-door-left {
+    transform: rotateY(-115deg);
+  }
+
+  .temple-intro.is-opening .temple-door-right {
+    transform: rotateY(115deg);
+  }
+
+  .temple-ganesha {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
