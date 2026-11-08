@@ -1399,3 +1399,25 @@ footer {
     bottom: 9%;
   }
 }
+
+/* =========================================
+   MOBILE - PRESERVE TEMPLE DOOR PROPORTIONS
+========================================= */
+
+@media (max-width: 650px) {
+
+  .temple-door {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    width: 50%;
+  }
+
+  .temple-door-left {
+    background-position: left center;
+  }
+
+  .temple-door-right {
+    background-position: right center;
+  }
+
+}
