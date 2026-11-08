@@ -13,8 +13,8 @@ html {
 
 body {
   margin: 0;
-  background: #f8eee6;
-  color: #5c4039;
+  background: #fbf5ed;
+  color: #63483f;
   font-family: "DM Sans", sans-serif;
   overflow-x: hidden;
 }
@@ -22,6 +22,16 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+:root {
+  --ivory: #fbf5ed;
+  --peach: #ebcfc1;
+  --blush: #d6aaa3;
+  --terracotta: #b98270;
+  --champagne: #b89a69;
+  --cocoa: #63483f;
+  --muted-text: #92776a;
 }
 
 /* =========================================
@@ -34,8 +44,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e8d9ce;
-  background: rgba(248,238,230,.88);
+  border-bottom: 1px solid rgba(184,154,105,.28);
+  background: rgba(251,245,237,.91);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -51,7 +61,7 @@ a {
 
 .monogram span,
 .footer-monogram span {
-  color: #b17b57;
+  color: var(--champagne);
   font-style: italic;
 }
 
@@ -61,7 +71,7 @@ a {
   font-size: 11px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  color: #886b5e;
+  color: #947466;
 }
 
 .topbar nav a:hover,
@@ -73,12 +83,12 @@ a {
   font-size: 11px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  border-bottom: 1px solid #b17b57;
+  border-bottom: 1px solid var(--champagne);
   padding: 8px 0;
 }
 
 .nav-cta span {
-  color: #b17b57;
+  color: var(--champagne);
   margin-left: 8px;
 }
 
@@ -99,10 +109,10 @@ a {
   overflow: hidden;
 
   background:
-    radial-gradient(ellipse at 50% 35%, rgba(255,255,255,.95), transparent 55%),
-    radial-gradient(ellipse at 15% 20%, #f5e1d4, transparent 45%),
-    radial-gradient(ellipse at 85% 80%, #ead3c3, transparent 45%),
-    linear-gradient(135deg, #fff9f3, #f8eee6);
+    radial-gradient(ellipse at 50% 35%, rgba(255,255,255,.96), transparent 58%),
+    radial-gradient(ellipse at 12% 18%, #f2ddd5, transparent 48%),
+    radial-gradient(ellipse at 88% 82%, #e9d4ca, transparent 48%),
+    linear-gradient(135deg, #fbf5ed, #f5e8df);
 }
 
 .hero:before,
@@ -132,7 +142,7 @@ a {
 .section-kicker {
   font-size: 9px;
   letter-spacing: 3px;
-  color: #a4775e;
+  color: #947466;
 }
 
 .eyebrow {
@@ -150,7 +160,7 @@ a {
 .ganesha {
   font-family: serif;
   font-size: 35px;
-  color: #b47b55;
+  color: var(--terracotta);
   margin: 32px 0 8px;
 }
 
@@ -158,7 +168,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   font-size: 21px;
-  color: #9c7868;
+  color: var(--muted-text);
   margin: 0;
 }
 
@@ -169,13 +179,13 @@ a {
   font-weight: 500;
   letter-spacing: -4px;
   margin: 25px 0 19px;
-  color: #704a40;
+  color: var(--cocoa);
 }
 
 .hero h1 em {
   font-family: "Playfair Display", serif;
   font-size: .55em;
-  color: #b47b55;
+  color: var(--terracotta);
   font-weight: 500;
 }
 
@@ -183,7 +193,7 @@ a {
   display: flex;
   align-items: center;
   gap: 13px;
-  color: #b47b55;
+  color: var(--terracotta);
   font-size: 22px;
 }
 
@@ -197,7 +207,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: 21px;
   line-height: 1.45;
-  color: #896b5e;
+  color: var(--muted-text);
   margin: 22px 0 27px;
 }
 
@@ -219,12 +229,12 @@ a {
   font-size: 27px;
   letter-spacing: 3px;
   font-weight: 500;
-  color: #704a40;
+  color: var(--cocoa);
 }
 
 .date-lockup i {
   font-style: normal;
-  color: #bd8c69;
+  color: var(--terracotta);
 }
 
 .primary-button {
@@ -232,7 +242,7 @@ a {
   align-items: center;
   gap: 24px;
   padding: 15px 22px;
-  background: #80584c;
+  background: var(--cocoa);
   color: #fff8f1;
   border: 0;
   font-family: "DM Sans", sans-serif;
@@ -241,11 +251,11 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   transition: transform .4s ease, box-shadow .4s ease, background .25s;
-  box-shadow: 0 7px 20px rgba(92,64,57,.10);
+  box-shadow: 0 10px 30px rgba(99,72,63,.14);
 }
 
 .primary-button:hover {
-  background: #65443c;
+  background: #49342f;
   transform: translateY(-4px);
   box-shadow: 0 12px 25px rgba(92,64,57,.18);
 }
@@ -265,7 +275,7 @@ a {
 
 .hero-bottom span {
   padding: 0 12px;
-  color: #bd8c69;
+  color: var(--champagne);
 }
 
 .hero-ornament {
@@ -281,7 +291,6 @@ a {
 .ornament-left {
   left: 8%;
   top: 20%;
-  animation-delay: 0s;
 }
 
 .ornament-right {
@@ -307,9 +316,7 @@ a {
   animation: cinematicReveal 1.8s cubic-bezier(.22,1,.36,1) forwards;
 }
 
-.hero .eyebrow {
-  animation-delay: .2s;
-}
+.hero .eyebrow { animation-delay: .2s; }
 
 .hero .ganesha {
   animation:
@@ -317,33 +324,13 @@ a {
     symbolGlow 3s ease-in-out 2.5s infinite alternate;
 }
 
-.hero .invite-line {
-  animation-delay: .8s;
-}
-
-.hero h1 {
-  animation-delay: 1.1s;
-}
-
-.hero .flourish {
-  animation-delay: 1.4s;
-}
-
-.hero .hero-copy {
-  animation-delay: 1.7s;
-}
-
-.hero .date-lockup {
-  animation-delay: 2s;
-}
-
-.hero .primary-button {
-  animation-delay: 2.3s;
-}
-
-.hero .hero-bottom {
-  animation-delay: 2.6s;
-}
+.hero .invite-line { animation-delay: .8s; }
+.hero h1 { animation-delay: 1.1s; }
+.hero .flourish { animation-delay: 1.4s; }
+.hero .hero-copy { animation-delay: 1.7s; }
+.hero .date-lockup { animation-delay: 2s; }
+.hero .primary-button { animation-delay: 2.3s; }
+.hero .hero-bottom { animation-delay: 2.6s; }
 
 @keyframes cinematicReveal {
   0% {
@@ -351,12 +338,10 @@ a {
     transform: translateY(30px);
     filter: blur(8px);
   }
-
   60% {
     opacity: .8;
     filter: blur(2px);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -365,40 +350,133 @@ a {
 }
 
 @keyframes flowerFloat {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg) scale(1);
-  }
-
-  25% {
-    transform: translateY(-12px) rotate(8deg) scale(1.05);
-  }
-
-  50% {
-    transform: translateY(-22px) rotate(16deg) scale(1.1);
-  }
-
-  75% {
-    transform: translateY(-10px) rotate(8deg) scale(1.05);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  25% { transform: translateY(-12px) rotate(8deg) scale(1.05); }
+  50% { transform: translateY(-22px) rotate(16deg) scale(1.1); }
+  75% { transform: translateY(-10px) rotate(8deg) scale(1.05); }
 }
 
 @keyframes symbolGlow {
-  from {
-    text-shadow: 0 0 5px rgba(180,123,85,.1);
-  }
-
-  to {
-    text-shadow: 0 0 28px rgba(180,123,85,.5);
-  }
+  from { text-shadow: 0 0 5px rgba(180,123,85,.1); }
+  to { text-shadow: 0 0 28px rgba(180,123,85,.5); }
 }
 
 @keyframes frameGlow {
-  from {
-    opacity: .25;
-  }
+  from { opacity: .25; }
+  to { opacity: .75; }
+}
 
+/* =========================================
+   PARINAYA - HOMEPAGE LAYOUT
+========================================= */
+
+.hero-auspicious {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 clamp(55px, 9vh, 90px);
+}
+
+.hero-auspicious .ganesha {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: clamp(36px, 4vw, 48px);
+}
+
+.hero-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 0 clamp(55px, 9vh, 85px);
+  gap: 9px;
+}
+
+.meaning-sanskrit {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  color: var(--terracotta);
+  letter-spacing: 3px;
+}
+
+.parinaya-name {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: var(--muted-text);
+}
+
+.parinaya-description {
+  margin: 5px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(20px, 2.5vw, 25px);
+  font-style: italic;
+  color: var(--cocoa);
+}
+
+.parinaya-tagline {
+  margin-top: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #a58b7c;
+}
+
+.hero-couple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-couple h1 {
+  margin: 0;
+}
+
+.hero-couple .flourish {
+  margin-top: 20px;
+}
+
+/* Legacy Parinaya meaning layout */
+
+.parinaya-meaning {
+  margin-top: 22px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  animation: meaningReveal 1.8s cubic-bezier(.22,1,.36,1) .35s both;
+}
+
+.parinaya-meaning p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  font-style: italic;
+  color: var(--cocoa);
+}
+
+.parinaya-meaning small {
+  font-family: "DM Sans", sans-serif;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: #a58b7c;
+  text-transform: uppercase;
+}
+
+@keyframes meaningReveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(5px);
+  }
   to {
-    opacity: .75;
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
   }
 }
 
@@ -416,29 +494,30 @@ a {
   font-weight: 500;
   font-size: clamp(45px, 6vw, 70px);
   line-height: .96;
-  color: #704a40;
+  color: var(--cocoa);
   margin: 20px 0;
 }
 
 .section h2 em {
   font-family: "Playfair Display", serif;
   font-size: .68em;
-  color: #b17b57;
+  color: var(--terracotta);
 }
 
 /* =========================================
    OUR STORY
 ========================================= */
 
-.story {
-  background: #fff9f3;
+.story,
+.rsvp {
+  background: #fffaf5;
 }
 
 .story-copy,
 .rsvp-intro {
   max-width: 480px;
   margin: 0 auto;
-  color: #92776a;
+  color: var(--muted-text);
   font-family: "Cormorant Garamond", serif;
   font-size: 21px;
   line-height: 1.45;
@@ -452,14 +531,16 @@ a {
   overflow: hidden;
   border-radius: 48% 48% 8px 8px;
   box-shadow: 0 20px 60px rgba(112,74,64,.12);
-  background: #f8eee6;
+  background: #f2e5dc;
+  border: 1px solid rgba(184,154,105,.22);
 }
 
 .story-watercolor {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 1.2s ease;
 }
 
@@ -472,15 +553,15 @@ a {
 ========================================= */
 
 .details {
-  background: #f2e4d9;
+  background: #f1e3dc;
 }
 
 .detail-card {
   max-width: 510px;
   margin: 45px auto 35px;
   padding: 45px 25px;
-  background: #fff9f3;
-  border: 1px solid #e5d2c3;
+  background: #fffaf5;
+  border: 1px solid rgba(184,154,105,.35);
   box-shadow: 0 15px 45px #79574612;
   transition: transform .4s ease, box-shadow .4s ease;
 }
@@ -492,7 +573,7 @@ a {
 
 .detail-icon {
   font-size: 28px;
-  color: #b17b57;
+  color: var(--champagne);
 }
 
 .detail-label {
@@ -506,7 +587,7 @@ a {
 .venue-name {
   font-family: "Cormorant Garamond", serif;
   font-size: 29px;
-  color: #704a40;
+  color: var(--cocoa);
   margin-top: 8px;
 }
 
@@ -570,7 +651,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: 37px;
   font-weight: 500;
-  color: #704a40;
+  color: var(--cocoa);
 }
 
 .countdown span {
@@ -586,13 +667,8 @@ a {
 }
 
 /* =========================================
-   RSVP FORM STYLES
-   (Preserved from original stylesheet)
+   RSVP FORM
 ========================================= */
-
-.rsvp {
-  background: #fff9f3;
-}
 
 .rsvp form {
   max-width: 650px;
@@ -637,7 +713,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #b17b57;
+  border-color: var(--champagne);
 }
 
 input::placeholder,
@@ -698,7 +774,7 @@ fieldset legend {
 ========================================= */
 
 footer {
-  background: #6d4a42;
+  background: var(--cocoa);
   color: #f7e9dd;
   text-align: center;
   padding: 45px 20px 30px;
@@ -762,22 +838,6 @@ footer small {
 }
 
 /* =========================================
-   WATERCOLOUR STORY ART
-========================================= */
-
-.couple-art {
-  box-shadow: 0 20px 60px rgba(112,74,64,.12);
-}
-
-.story-watercolor {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 1.2s ease;
-}
-
-/* =========================================
    PARINAYA - TEMPLE INTRO
 ========================================= */
 
@@ -789,22 +849,24 @@ footer small {
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
-  background: #f8eee6;
+  background: var(--ivory);
   opacity: 1;
   visibility: visible;
-  transition: opacity 2s ease, visibility 2s ease;
+  transition:
+    opacity 2.4s cubic-bezier(.4,0,.2,1),
+    visibility 2.4s ease;
 }
 
 .temple-scene {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  perspective: 1800px;
-  perspective-origin: center center;
-  background: #f8eee6;
+  perspective: 2200px;
+  perspective-origin: 50% 50%;
+  background: var(--ivory);
 }
 
-/* Ganesha background - hidden behind closed doors */
+/* Ganesha background */
 
 .temple-ganesha {
   position: absolute;
@@ -815,19 +877,29 @@ footer small {
   object-position: center;
   z-index: 1;
   opacity: 0;
-  transform: scale(1.06);
-  animation: none;
-  transition: opacity 3s ease, transform 4s ease;
+  transform: scale(1.10);
+  transition:
+    opacity 3.4s cubic-bezier(.22,1,.36,1) 1.1s,
+    transform 5.5s cubic-bezier(.22,1,.36,1) 1.1s;
+  image-rendering: auto;
 }
-
-/* Reveal Ganesha when doors begin opening */
 
 .temple-intro.is-opening .temple-ganesha {
   opacity: 1;
   transform: scale(1);
 }
 
-/* Door panels */
+/* =========================================
+   TEMPLE DOORS - PROPORTION CONTROL
+========================================= */
+
+/*
+  Assumption:
+  temple-doors.png is one image with two equal
+  door panels placed side by side.
+
+  Each CSS door displays one half of that image.
+*/
 
 .temple-door {
   position: absolute;
@@ -844,29 +916,28 @@ footer small {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 
-  transition: transform 4.2s cubic-bezier(.65, 0, .25, 1);
+  transition:
+    transform 5.2s cubic-bezier(.65,0,.25,1),
+    filter 5.2s ease;
+
   will-change: transform;
 }
 
-/* Left door */
-
 .temple-door-left {
   left: 0;
-  background-position: left center;
+  background-position: 0% center;
   transform-origin: left center;
   transform: rotateY(0deg);
+  box-shadow: inset -12px 0 24px rgba(70,45,35,.10);
 }
-
-/* Right door */
 
 .temple-door-right {
   right: 0;
-  background-position: right center;
+  background-position: 100% center;
   transform-origin: right center;
   transform: rotateY(0deg);
+  box-shadow: inset 12px 0 24px rgba(70,45,35,.10);
 }
-
-/* Doors rotate outward around their hinges */
 
 .temple-intro.is-opening .temple-door-left {
   transform: rotateY(-115deg);
@@ -876,7 +947,7 @@ footer small {
   transform: rotateY(115deg);
 }
 
-/* Subtle blessing text */
+/* Blessing text */
 
 .temple-intro-text {
   display: block;
@@ -889,17 +960,18 @@ footer small {
   padding: 0 15px;
   pointer-events: none;
   opacity: 0;
-  animation: blessingFade 2.5s ease .8s forwards;
+  animation: none;
+  transition: opacity 1.8s ease;
 }
 
 .temple-intro-text span {
   display: block;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(18px, 3vw, 25px);
+  font-size: clamp(18px,3vw,25px);
   font-weight: 400;
   letter-spacing: 2px;
-  color: #ad906e;
-  opacity: .72;
+  color: #c3a477;
+  text-shadow: 0 2px 15px rgba(255,250,245,.8);
 }
 
 .temple-intro-text p,
@@ -907,25 +979,28 @@ footer small {
   display: none;
 }
 
-@keyframes blessingFade {
+.temple-intro.is-opening .temple-intro-text {
+  animation: blessingReveal 2s ease 4.7s forwards;
+}
+
+@keyframes blessingReveal {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(12px);
   }
-
   to {
-    opacity: .68;
+    opacity: .72;
     transform: translateY(0);
   }
 }
-
-/* Fade away and reveal the main website */
 
 .temple-intro.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 2s ease, visibility 2s ease;
+  transition:
+    opacity 2.4s cubic-bezier(.4,0,.2,1),
+    visibility 2.4s ease;
 }
 
 /* =========================================
@@ -1022,302 +1097,6 @@ footer small {
   }
 
   .temple-scene {
-    perspective: 1200px;
-  }
-
-  .temple-door {
-    transition-duration: 3.8s;
-  }
-
-  .temple-ganesha {
-    object-position: center;
-  }
-
-  .temple-intro-text {
-    bottom: 7%;
-  }
-}
-
-/* =========================================
-   PARINAYA - MOBILE TEMPLE DOOR FIX
-========================================= */
-
-@media (max-width: 650px) {
-
-  .temple-scene {
-    perspective: 1800px;
-  }
-
-  .temple-door {
-    width: 50%;
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-    transition: transform 4.6s cubic-bezier(.65,0,.25,1);
-  }
-
-  .temple-door-left {
-    left: 0;
-    background-position: left center;
-    transform-origin: left center;
-  }
-
-  .temple-door-right {
-    right: 0;
-    background-position: right center;
-    transform-origin: right center;
-  }
-
-  .temple-ganesha {
-    object-fit: cover;
-    object-position: center center;
-  }
-
-}
-
-/* =========================================
-   ACCESSIBILITY
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-    filter: none !important;
-  }
-
-  .temple-ganesha {
-    opacity: 0 !important;
-  }
-
-  .temple-intro.is-opening .temple-ganesha {
-    opacity: 1 !important;
-  }
-}
-
-/* =========================================
-   PARINAYA - REFINED CINEMATIC UPGRADE
-========================================= */
-
-:root {
-  --ivory: #fbf5ed;
-  --peach: #ebcfc1;
-  --blush: #d6aaa3;
-  --terracotta: #b98270;
-  --champagne: #b89a69;
-  --cocoa: #63483f;
-  --muted-text: #92776a;
-}
-
-/* Refined overall palette */
-
-body {
-  background: var(--ivory);
-  color: var(--cocoa);
-}
-
-.topbar {
-  background: rgba(251, 245, 237, .91);
-  border-bottom-color: rgba(184, 154, 105, .28);
-}
-
-.monogram span,
-.footer-monogram span {
-  color: var(--champagne);
-}
-
-.topbar nav,
-.eyebrow,
-.section-kicker {
-  color: #947466;
-}
-
-.hero {
-  background:
-    radial-gradient(ellipse at 50% 35%, rgba(255,255,255,.96), transparent 58%),
-    radial-gradient(ellipse at 12% 18%, #f2ddd5, transparent 48%),
-    radial-gradient(ellipse at 88% 82%, #e9d4ca, transparent 48%),
-    linear-gradient(135deg, #fbf5ed, #f5e8df);
-}
-
-.hero h1,
-.section h2,
-.date-lockup strong,
-.countdown strong {
-  color: var(--cocoa);
-}
-
-.hero h1 em,
-.section h2 em,
-.ganesha,
-.flourish {
-  color: var(--terracotta);
-}
-
-.hero-copy,
-.invite-line,
-.story-copy {
-  color: var(--muted-text);
-}
-
-.primary-button {
-  background: var(--cocoa);
-  box-shadow: 0 10px 30px rgba(99,72,63,.14);
-}
-
-.primary-button:hover {
-  background: #49342f;
-}
-
-.story,
-.rsvp {
-  background: #fffaf5;
-}
-
-.details {
-  background: #f1e3dc;
-}
-
-.detail-card {
-  background: #fffaf5;
-  border-color: rgba(184,154,105,.35);
-}
-
-.detail-icon {
-  color: var(--champagne);
-}
-
-footer {
-  background: #63483f;
-}
-
-/* =========================================
-   TEMPLE - CINEMATIC DOOR MOVEMENT
-========================================= */
-
-.temple-intro {
-  background: #fbf5ed;
-  transition:
-    opacity 2.4s cubic-bezier(.4,0,.2,1),
-    visibility 2.4s ease;
-}
-
-.temple-scene {
-  perspective: 2200px;
-  perspective-origin: 50% 50%;
-  background: #fbf5ed;
-}
-
-.temple-door {
-  transition:
-    transform 5.2s cubic-bezier(.65,0,.25,1),
-    filter 5.2s ease;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-/* Realistic outward hinged opening */
-
-.temple-door-left {
-  transform-origin: 0% 50%;
-  transform: rotateY(0deg);
-  box-shadow: inset -12px 0 24px rgba(70,45,35,.10);
-}
-
-.temple-door-right {
-  transform-origin: 100% 50%;
-  transform: rotateY(0deg);
-  box-shadow: inset 12px 0 24px rgba(70,45,35,.10);
-}
-
-.temple-intro.is-opening .temple-door-left {
-  transform: rotateY(-115deg);
-}
-
-.temple-intro.is-opening .temple-door-right {
-  transform: rotateY(115deg);
-}
-
-/* Ganesha appears after the doors begin opening */
-
-.temple-ganesha {
-  opacity: 0;
-  transform: scale(1.10);
-  transition:
-    opacity 3.4s cubic-bezier(.22,1,.36,1) 1.1s,
-    transform 5.5s cubic-bezier(.22,1,.36,1) 1.1s;
-  image-rendering: auto;
-}
-
-.temple-intro.is-opening .temple-ganesha {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Blessing appears after the reveal */
-
-.temple-intro-text {
-  opacity: 0;
-  animation: none;
-  transition: opacity 1.8s ease;
-}
-
-.temple-intro.is-opening .temple-intro-text {
-  animation: blessingReveal 2s ease 4.7s forwards;
-}
-
-.temple-intro-text span {
-  color: #c3a477;
-  text-shadow: 0 2px 15px rgba(255,250,245,.8);
-}
-
-@keyframes blessingReveal {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: .72;
-    transform: translateY(0);
-  }
-}
-
-/* Softer transition into homepage */
-
-.temple-intro.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition:
-    opacity 2.4s cubic-bezier(.4,0,.2,1),
-    visibility 2.4s ease;
-}
-
-/* =========================================
-   STORY IMAGE - BETTER PRESENTATION
-========================================= */
-
-.couple-art {
-  background: #f2e5dc;
-  border: 1px solid rgba(184,154,105,.22);
-}
-
-.story-watercolor {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* =========================================
-   MOBILE ADJUSTMENTS
-========================================= */
-
-@media (max-width: 650px) {
-  .temple-scene {
     perspective: 1500px;
   }
 
@@ -1328,316 +1107,12 @@ footer {
   .temple-ganesha {
     object-position: center center;
   }
-   
-/* =========================================
-   PARINAYA - NAME MEANING
-========================================= */
-
-.parinaya-meaning {
-  margin-top: 22px;
-  margin-bottom: 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  animation: meaningReveal 1.8s cubic-bezier(.22,1,.36,1) .35s both;
-}
-
-.meaning-sanskrit {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 13px;
-  letter-spacing: 3px;
-  color: #a77d66;
-}
-
-.parinaya-meaning p {
-  margin: 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 19px;
-  font-style: italic;
-  color: #63483f;
-}
-
-.parinaya-meaning small {
-  font-family: "DM Sans", sans-serif;
-  font-size: 8px;
-  letter-spacing: 1.5px;
-  color: #a58b7c;
-  text-transform: uppercase;
-}
-
-@keyframes meaningReveal {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-    filter: blur(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
-@media (max-width: 650px) {
-  .parinaya-meaning {
-    margin-top: 18px;
-  }
-
-  .parinaya-meaning p {
-    font-size: 17px;
-  }
-
-  .parinaya-meaning small {
-    font-size: 7px;
-    letter-spacing: 1px;
-  }
-}
-
 
   .temple-intro-text {
     bottom: 9%;
   }
-}
 
-/* =========================================
-   MOBILE - PRESERVE TEMPLE DOOR PROPORTIONS
-========================================= */
-
-@media (max-width: 650px) {
-
-  .temple-door {
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    width: 50%;
-  }
-
-  .temple-door-left {
-    background-position: left center;
-  }
-
-  .temple-door-right {
-    background-position: right center;
-  }
-
-}
-
-/* =========================================
-   PREMIUM HOMEPAGE VERTICAL SPACING
-========================================= */
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero .ganesha {
-  margin: 0 0 28px;
-  line-height: 1.2;
-}
-
-.hero .eyebrow {
-  margin-bottom: 30px;
-}
-
-.hero .parinaya-meaning {
-  margin-top: 0;
-  margin-bottom: 34px;
-  gap: 9px;
-}
-
-.hero .meaning-sanskrit {
-  font-size: 14px;
-  letter-spacing: 3px;
-}
-
-.hero .parinaya-meaning p {
-  font-size: 21px;
-}
-
-.hero .parinaya-meaning small {
-  font-size: 9px;
-  letter-spacing: 1.6px;
-}
-
-.hero h1 {
-  margin-top: 0;
-}
-
-@media (max-width: 650px) {
-
-  .hero .ganesha {
-    margin-bottom: 22px;
-  }
-
-  .hero .eyebrow {
-    margin-bottom: 24px;
-  }
-
-  .hero .parinaya-meaning {
-    margin-bottom: 28px;
-    gap: 8px;
-  }
-
-  .hero .parinaya-meaning p {
-    font-size: 19px;
-  }
-
-  .hero .parinaya-meaning small {
-    font-size: 8px;
-  }
-
-}
-
-/* =========================================
-   PARINAYA - MOBILE PORTRAIT TEMPLE FIX
-========================================= */
-
-@media screen and (max-width: 650px) and (orientation: portrait) {
-
-  .temple-intro {
-    width: 100%;
-    height: 100dvh;
-    overflow: hidden;
-  }
-
-  .temple-scene {
-    position: absolute;
-    inset: 0;
-    perspective: 1600px;
-    perspective-origin: 50% 50%;
-    overflow: hidden;
-  }
-
-  .temple-door {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transition: transform 4.6s cubic-bezier(.65,0,.25,1);
-  }
-
-  .temple-door-left {
-    left: 0;
-    background-position: left center;
-    transform-origin: left center;
-  }
-
-  .temple-door-right {
-    right: 0;
-    background-position: right center;
-    transform-origin: right center;
-  }
-
-  .temple-intro.is-opening .temple-door-left {
-    transform: rotateY(-115deg);
-  }
-
-  .temple-intro.is-opening .temple-door-right {
-    transform: rotateY(115deg);
-  }
-
-  .temple-ganesha {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-}
-
-/* =========================================
-   PARINAYA - REFINED HOMEPAGE LAYOUT
-========================================= */
-
-/* Main hero alignment */
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* GROUP 1 - STANDALONE OM */
-.hero-auspicious {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 0 0 clamp(55px, 9vh, 90px);
-}
-
-.hero-auspicious .ganesha {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: clamp(36px, 4vw, 48px);
-}
-
-/* GROUP 2 - PARINAYA */
-.hero-identity {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 0 0 clamp(55px, 9vh, 85px);
-  gap: 9px;
-}
-
-.meaning-sanskrit {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 22px;
-  color: #b98270;
-  letter-spacing: 3px;
-}
-
-.parinaya-name {
-  font-family: "DM Sans", sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 6px;
-  color: #92776a;
-}
-
-.parinaya-description {
-  margin: 5px 0 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(20px, 2.5vw, 25px);
-  font-style: italic;
-  color: #63483f;
-}
-
-.parinaya-tagline {
-  margin-top: 4px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 9px;
-  letter-spacing: 2px;
-  color: #a58b7c;
-}
-
-/* GROUP 3 - COUPLE'S NAMES */
-.hero-couple {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.hero-couple h1 {
-  margin: 0;
-}
-
-.hero-couple .flourish {
-  margin-top: 20px;
-}
-
-/* MOBILE SPACING */
-@media (max-width: 650px) {
+  /* Homepage spacing */
 
   .hero-auspicious {
     margin-bottom: 65px;
@@ -1673,6 +1148,40 @@ footer {
   .hero-couple h1 {
     margin: 0;
   }
+
+  .parinaya-meaning {
+    margin-top: 18px;
+  }
+
+  .parinaya-meaning p {
+    font-size: 17px;
+  }
+
+  .parinaya-meaning small {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
 }
 
+/* =========================================
+   ACCESSIBILITY
+========================================= */
 
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    filter: none !important;
+  }
+
+  .temple-ganesha {
+    opacity: 0 !important;
+  }
+
+  .temple-intro.is-opening .temple-ganesha {
+    opacity: 1 !important;
+  }
+}
