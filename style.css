@@ -1421,3 +1421,72 @@ footer {
   }
 
 }
+
+/* =========================================
+   PREMIUM HOMEPAGE VERTICAL SPACING
+========================================= */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero .ganesha {
+  margin: 0 0 28px;
+  line-height: 1.2;
+}
+
+.hero .eyebrow {
+  margin-bottom: 30px;
+}
+
+.hero .parinaya-meaning {
+  margin-top: 0;
+  margin-bottom: 34px;
+  gap: 9px;
+}
+
+.hero .meaning-sanskrit {
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.hero .parinaya-meaning p {
+  font-size: 21px;
+}
+
+.hero .parinaya-meaning small {
+  font-size: 9px;
+  letter-spacing: 1.6px;
+}
+
+.hero h1 {
+  margin-top: 0;
+}
+
+@media (max-width: 650px) {
+
+  .hero .ganesha {
+    margin-bottom: 22px;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: 24px;
+  }
+
+  .hero .parinaya-meaning {
+    margin-bottom: 28px;
+    gap: 8px;
+  }
+
+  .hero .parinaya-meaning p {
+    font-size: 19px;
+  }
+
+  .hero .parinaya-meaning small {
+    font-size: 8px;
+  }
+
+}
+
