@@ -1553,3 +1553,126 @@ footer {
   }
 }
 
+/* =========================================
+   PARINAYA - REFINED HOMEPAGE LAYOUT
+========================================= */
+
+/* Main hero alignment */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* GROUP 1 - STANDALONE OM */
+.hero-auspicious {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 clamp(55px, 9vh, 90px);
+}
+
+.hero-auspicious .ganesha {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: clamp(36px, 4vw, 48px);
+}
+
+/* GROUP 2 - PARINAYA */
+.hero-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 0 clamp(55px, 9vh, 85px);
+  gap: 9px;
+}
+
+.meaning-sanskrit {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  color: #b98270;
+  letter-spacing: 3px;
+}
+
+.parinaya-name {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: #92776a;
+}
+
+.parinaya-description {
+  margin: 5px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(20px, 2.5vw, 25px);
+  font-style: italic;
+  color: #63483f;
+}
+
+.parinaya-tagline {
+  margin-top: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #a58b7c;
+}
+
+/* GROUP 3 - COUPLE'S NAMES */
+.hero-couple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-couple h1 {
+  margin: 0;
+}
+
+.hero-couple .flourish {
+  margin-top: 20px;
+}
+
+/* MOBILE SPACING */
+@media (max-width: 650px) {
+
+  .hero-auspicious {
+    margin-bottom: 65px;
+  }
+
+  .hero-auspicious .ganesha {
+    font-size: 39px;
+  }
+
+  .hero-identity {
+    margin-bottom: 65px;
+    gap: 8px;
+  }
+
+  .meaning-sanskrit {
+    font-size: 21px;
+  }
+
+  .parinaya-name {
+    font-size: 10px;
+    letter-spacing: 5px;
+  }
+
+  .parinaya-description {
+    font-size: 21px;
+  }
+
+  .parinaya-tagline {
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+
+  .hero-couple h1 {
+    margin: 0;
+  }
+}
+
+
